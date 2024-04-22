@@ -36,7 +36,8 @@ async function solveSudoku(){
             const cellId = `cell-${row}-${col}`;
             const cellValue = document.getElementById(cellId).value;
             sudokuArray[row][col] = cellValue !== "" ? parseInt(cellValue) : 0;
-            
+
+            // Identify user-input cells and mark them
             const cell = document.getElementById(cellId);
             if(sudokuArray[row][col] !== 0){
                 cell.classList.add("user-input");
